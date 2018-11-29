@@ -3,28 +3,48 @@ import logo from './logo.svg';
 import './App.css';
 import Table from './Table';
 import Form from './Form';
+import Pager from './Pager';
 
 
 class App extends Component {
     state = {
        characters : [
 				{
-					'name': 'Charlie',
-					'job': 'Janitor'
+					'name': 'Иван Васильевич',
+					'job': 'санитар'
 				},
 				{
-					'name': 'Mac',
-					'job': 'Bouncer'
+					'name': 'Денис Игоревич',
+					'job': 'врач'
 				},
 				{
-					'name': 'Dee',
-					'job': 'Aspring actress'
+					'name': 'Роман Петрович',
+					'job': 'программист'
 				},
 				{
-					'name': 'Dennis',
-					'job': 'Bartender'
+					'name': 'Марь Иванна',
+					'job': 'бухгалтер'
+				},
+				{
+					'name': 'Карен Араевич',
+					'job': 'инструктор'
+				},
+				{
+					'name': 'Василиса Петровна',
+					'job': 'кадровик'
+				},
+				{
+					'name': 'Иван Иванович',
+					'job': 'сантехник'
+				},
+				{
+					'name': 'Алексей',
+					'job': 'водитель'
 				}
-			]
+			],
+		current_page : 1,
+		cnt_on_page  : 5
+		
 	};	
 	
 	removeCharacter = index => {
@@ -41,15 +61,23 @@ class App extends Component {
 		this.setState({characters: [...this.state.characters, character]});
 	}
 	
-    render() {	  
+    render() {	
+
+		const start = this.state.cnt_on_page *(this.state.current_page - 1);
+	//	const cnt_pages = Math.floor(this.state.characters/this.state.cnt_on_page) ;
 		return (
 			<div className="container">
-				<Table
-					characterData={this.state.characters}
+				<Table				    
+					characterData={this.state.characters.slice(start,start+this.state.cnt_on_page)}
 					removeCharacter={this.removeCharacter} 
 				/>
 				<Form handleSubmit={this.handleSubmit}/>
-			</div>
+			
+				<Pager 
+					current_page={this.state.current_page}
+					cnt_pages={Math.ceil(this.state.characters.length/this.state.cnt_on_page)} 
+				/>
+			</div>	
 		);   
     }
 }

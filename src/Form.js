@@ -41,7 +41,7 @@ class Form extends Component {
 					type="text" 
 					name="job" 
 					value={job} 
-					onChange={this.handleChange}/>
+					onChange={this.handleChange}/>					
 				<input 
 					type="button" 
 					value="Добавить" 

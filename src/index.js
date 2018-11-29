@@ -18,15 +18,4 @@ import './index.css';
 import App from './App';
 
 
-
-/*
-function App() {
- return (
-    <div>
-        <h1>Список сотрудников</h1>
-        <Article/>
-    </div>
-  );
-}
-*/
 render(<App/> ,document.getElementById('root'))
