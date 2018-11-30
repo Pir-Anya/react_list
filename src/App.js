@@ -57,6 +57,12 @@ class App extends Component {
       });
     }
 	
+	changePageClick =  event => {
+		this.setState({
+		  current_page: Number(event.target.id)
+		});
+    }
+	
 	handleSubmit = character => {
 		this.setState({characters: [...this.state.characters, character]});
 	}
@@ -71,11 +77,13 @@ class App extends Component {
 					characterData={this.state.characters.slice(start,start+this.state.cnt_on_page)}
 					removeCharacter={this.removeCharacter} 
 				/>
+				
 				<Form handleSubmit={this.handleSubmit}/>
 			
 				<Pager 
 					current_page={this.state.current_page}
-					cnt_pages={Math.ceil(this.state.characters.length/this.state.cnt_on_page)} 
+					cnt_pages={Math.ceil(this.state.characters.length/this.state.cnt_on_page)}
+					changePageClick={this.changePageClick} 					
 				/>
 			</div>	
 		);   

@@ -7,7 +7,7 @@ const TableBody = props => {
                 <td>{row.name}</td>
                 <td>{row.job}</td>
 				<td>
-			      <button onClick={() => props.editCharacter(index)}>Редактировать</button>		
+			      <button onClick={() => props.editCharacter(index)}>Ред.</button>		
 				  <button onClick={() => props.removeCharacter(index)}>Удалить</button>
 				</td>
             </tr>
