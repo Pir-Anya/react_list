@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 
-class Form extends Component {
+class AddUser extends Component {
     constructor(props) {
         super(props);
 
         this.initialState = {
             name: '',
-            job: ''
+            job: '',
+			tel: '',
+			adress: ''
         };
 
-        this.state = this.initialState;
+        this.state = this.initialState;		
+		
     }
+	
+	
 	
 	handleChange = event => {
 		const {name, value} = event.target;
@@ -26,7 +31,7 @@ class Form extends Component {
 	}
 	
 	render() {
-		const { name, job } = this.state; 
+		const { name, job,tel,adress } = this.state; 
 
 		return (
 			<form >
@@ -41,7 +46,19 @@ class Form extends Component {
 					type="text" 
 					name="job" 
 					value={job} 
-					onChange={this.handleChange}/>					
+					onChange={this.handleChange}/>		
+				<label>Телефон</label>
+				<input 
+					type="text" 
+					name="tel" 
+					value={tel} 
+					onChange={this.handleChange}/>	
+				<label>Адрес</label>		
+				<input 
+					type="text" 
+					name="adress" 
+					value={adress} 
+					onChange={this.handleChange}/>		
 				<input 
 					type="button" 
 					value="Добавить" 
@@ -51,4 +68,4 @@ class Form extends Component {
 	}
 }
 
-export default Form;
+export default AddUser;

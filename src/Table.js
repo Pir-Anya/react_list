@@ -4,14 +4,16 @@ import TableBody from './TableBody';
 
 class Table extends Component {
     render() {
-        const { characterData, removeCharacter } = this.props;
+        const { characterData, removeUser, editUser, updateUser } = this.props;
 
         return (
             <table>
                 <TableHeader />
                 <TableBody 
                     characterData={characterData} 
-                    removeCharacter={removeCharacter} 
+                    removeUser={removeUser} 
+					editUser={editUser}
+					updateUser={updateUser}
                 />
             </table>
         );
