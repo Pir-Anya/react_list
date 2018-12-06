@@ -5,79 +5,25 @@ import Table from './Table';
 import AddUser  from './AddUser';
 import Pager from './Pager';
 import EditUser from './EditUser'
+import customData from './data.json';
 
 
 class App extends Component {
+	
+	
     state = {
-       characters : [
-				{
-					'id' : 1,
-					'name': 'Иван Васильевич',
-					'job': 'санитар',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 2,
-					'name': 'Денис Игоревич',
-					'job': 'врач',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 3,
-					'name': 'Роман Петрович',
-					'job': 'программист','tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 4,
-					'name': 'Марь Иванна',
-					'job': 'бухгалтер',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 5,
-					'name': 'Карен Араевич',
-					'job': 'инструктор',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 6,
-					'name': 'Василиса Петровна',
-					'job': 'кадровик',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 7,
-					'name': 'Иван Иванович',
-					'job': 'сантехник',
-					'tel': '',
-					'adress': ''
-				},
-				{
-					'id' : 8,
-					'name': 'Алексей',
-					'job': 'водитель',
-					'tel': '',
-					'adress': ''
-				}
-			],
+        //данные из файла
+		characters : customData,	
 		current_page : 1,
-		cnt_on_page  : 5,
+		cnt_on_page  : 7,		
+		//режим окна(adding или editing)
 		action : 'adding',
-		edit_user : null
-		
-	}	
+		edit_user : null		
+	}
 	
-	
-	
-	removeUser = index => {
+	//удаление 
+	removeUser = index => {		
       const { characters } = this.state;
-
       this.setState({
         characters: characters.filter((character, i) => { 
             return i !== index;
@@ -85,46 +31,61 @@ class App extends Component {
       });
     }
 	
+	//переход в режим редактирования
 	editUser = user => {
-     
-	// alert(user.id);
 		this.setState({ 
 			action : 'editing',
 			edit_user :user
 		});
-		
-		//setCurrentUser({ id: user.id, name: user.name, adress: user.adress, tel: user.tel, job: user.job })
-		//return true;
+		this.render();
     }
 	
+	//здесь происходит апдейт записи
 	updateUser = (id, updatedUser) => {
 	    this.setState({ 
 			action : 'adding',
 			edit_user : updatedUser,
-			characters : this.state.characters.map(user => (user.id === id ? updatedUser : user))
+			characters : this.state.characters.map(user => (user.id === updatedUser.id ? updatedUser : user))
 		});
 		this.state.characters.map(user => (user.id === id ? updatedUser : user));
-		
-		//alert(updatedUser.id);
-	    //setUsers(characters.map(user => (user.id === id ? updatedUser : user)))
 	}
 	
+	//переход на другую страницу
 	changePageClick =  event => {
 		this.setState({
 		  current_page: Number(event.target.id)
 		});
     }
 	
+	//переход в режим добавления
+	setAdding = event => {
+		this.setState({action : 'adding'});
+	}
+	
+	//добавление
 	handleSubmit = character => {
 		this.setState({characters: [...this.state.characters, character]});
 	}
 	
     render() {	
-
+	
 		const start = this.state.cnt_on_page *(this.state.current_page - 1);
 		return (
+		<div>
+		<div class="container-fluid rc-intro">
+			<div class="container">
+					  
+				<img src={logo} className="App-logo" alt="logo" />
+				<h1 class="rc-title">Список сотрудников</h1>
+
+				<p class="rc-description">CRUD</p>
+			</div>
+		</div>
+		
 			<div className="container">
-			    <div className="flex-large">
+			
+		
+			    <div className="half">
 					<Table				    
 						characterData={this.state.characters.slice(start,start+this.state.cnt_on_page)}
 						removeUser={this.removeUser} 
@@ -138,26 +99,27 @@ class App extends Component {
 					/>
 					
 				</div>	
-				<div className="flex-large">
+				<div className="manage" >
 				  {this.state.action == 'editing' ? (
 					<div>
-					  <h2>Редактирование</h2>
+					  <h2>Изменить</h2>
 					  <EditUser 
 					     editUser={this.editUser}
 						 updateUser={this.updateUser}
 						 user = {this.state.edit_user}
-						
+						 setAdding = {this.setAdding}
 					  />
 					</div>
 				  ) : (
 					<div>
-					  <h2>Добавление</h2>
+					  <h2>Добавить</h2>
 					  <AddUser handleSubmit={this.handleSubmit}/>
 					</div>
 				  )}
 				</div>	
 				
 			</div>	
+		</div>		
 		);   
     }
 }

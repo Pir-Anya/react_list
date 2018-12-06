@@ -4,7 +4,7 @@
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 20vmin;
 }
 
 .App-header {
@@ -95,7 +95,7 @@ span.cur_page {
 	color: tomato;
 }
 
-.rc-intro{background-color:#222;padding:2rem;text-align:center;margin-bottom:3rem}.rc-img{max-width:50px}.rc-title{font-size:3rem;margin-top:3rem;color:#fff;font-family:'Open Sans';font-weight:700;letter-spacing:-2px}.rc-description{margin-top:2rem;font-size:2rem;color:#ccc}.table-striped{border:1px solid #ddd}.table-striped tbody>tr:hover{background:#eee;cursor:pointer;transition:all .5s}.btn:hover{transition:all .5s}.toolbar .btn{margin-right:1rem}.preloader__wrapper{position:fixed;top:0;left:0;height:100%;z-index:1000;width:100%;-webkit-animation:fadeIn .8s;animation:fadeIn .8s}.preloader>div{position:absolute;top:50%;left:50%;margin-left:-103px;margin-top:-103px;width:200px;height:200px;border-radius:50%;border:1px solid #40c4ff;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform:rotateX(80deg) rotateY(20deg);transform:rotateX(80deg) rotateY(20deg)}.preloader>div:first-of-type:after,.preloader>div>div:after{content:"";left:50%;border-radius:50%}.preloader>div:first-of-type:after{position:absolute;height:40px;width:40px;background:#40c4ff;-webkit-transform:rotateX(-80deg) rotateY(0);transform:rotateX(-80deg) rotateY(0);box-shadow:0 0 25px #40c4ff;-webkit-animation:nucleus_ 1s infinite linear;animation:nucleus_ 1s infinite linear;top:50%;margin-top:-20px;margin-left:-20px}.preloader>div:nth-of-type(2){-webkit-transform:rotateX(-80deg) rotateY(20deg);transform:rotateX(-80deg) rotateY(20deg)}.preloader>div:nth-of-type(3){-webkit-transform:rotateX(-90deg) rotateY(90deg);transform:rotateX(-90deg) rotateY(90deg)}.preloader>div:nth-of-type(4){-webkit-transform:rotateX(70deg) rotateY(60deg);transform:rotateX(70deg) rotateY(60deg)}.preloader>div>div{width:200px;height:200px;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-animation:trail_ 1s infinite ease-in-out;animation:trail_ 1s infinite ease-in-out}.preloader>div>div:after{position:absolute;top:-5px;box-shadow:0 0 12px #40c4ff;margin-left:-5px;width:8px;height:8px;background-color:#40c4ff;-webkit-animation:particle_ 1s infinite linear;animation:particle_ 1s infinite linear}.preloader>div:nth-of-type(2)>div,.preloader>div:nth-of-type(2)>div:after{-webkit-animation-delay:-.5s;animation-delay:-.5s}.preloader>div:nth-of-type(3)>div,.preloader>div:nth-of-type(3)>div:after{-webkit-animation-delay:-1s;animation-delay:-1s}.preloader>div:nth-of-type(4)>div,.preloader>div:nth-of-type(4)>div:after{-webkit-animation-delay:-1.5s;animation-delay:-1.5s}@-webkit-keyframes trail_{from{-webkit-transform:rotateZ(0)}to{-webkit-transform:rotateZ(360deg)}}@keyframes trail_{from{-webkit-transform:rotateZ(0);transform:rotateZ(0)}to{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}}@-webkit-keyframes particle_{from{-webkit-transform:rotateX(90deg) rotateY(0);transform:rotateX(90deg) rotateY(0)}to{-webkit-transform:rotateX(90deg) rotateY(-360deg);transform:rotateX(90deg) rotateY(-360deg)}}@keyframes particle_{from{-webkit-transform:rotateX(90deg) rotateY(0);transform:rotateX(90deg) rotateY(0)}to{-webkit-transform:rotateX(90deg) rotateY(-360deg);transform:rotateX(90deg) rotateY(-360deg)}}@keyframes nucleus_{0%,100%{box-shadow:0 0 0 transparent}50%{box-shadow:0 0 25px #40c4ff}}@-webkit-keyframes nucleus_{0%,100%{box-shadow:0 0 0 transparent}50%{box-shadow:0 0 25px #40c4ff}}@-webkit-keyframes fadeIn{from{background:#fff}to{background:rgba(255,255,255,.1)}}@keyframes fadeIn{from{background:#fff}to{background:rgba(255,255,255,.1)}}
+.rc-intro{background-color:#222;padding:2rem;text-align:center;margin-bottom:3rem}.rc-img{max-width:50px}.rc-title{font-size:3rem;margin-top:1rem;color:#fff;font-family:'Open Sans';font-weight:700;letter-spacing:-2px}.rc-description{margin-top:2rem;font-size:2rem;color:#ccc}.table-striped{border:1px solid #ddd}.table-striped tbody>tr:hover{background:#eee;cursor:pointer;transition:all .5s}.btn:hover{transition:all .5s}.toolbar .btn{margin-right:1rem}.preloader__wrapper{position:fixed;top:0;left:0;height:100%;z-index:1000;width:100%;-webkit-animation:fadeIn .8s;animation:fadeIn .8s}.preloader>div{position:absolute;top:50%;left:50%;margin-left:-103px;margin-top:-103px;width:200px;height:200px;border-radius:50%;border:1px solid #40c4ff;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-transform:rotateX(80deg) rotateY(20deg);transform:rotateX(80deg) rotateY(20deg)}.preloader>div:first-of-type:after,.preloader>div>div:after{content:"";left:50%;border-radius:50%}.preloader>div:first-of-type:after{position:absolute;height:40px;width:40px;background:#40c4ff;-webkit-transform:rotateX(-80deg) rotateY(0);transform:rotateX(-80deg) rotateY(0);box-shadow:0 0 25px #40c4ff;-webkit-animation:nucleus_ 1s infinite linear;animation:nucleus_ 1s infinite linear;top:50%;margin-top:-20px;margin-left:-20px}.preloader>div:nth-of-type(2){-webkit-transform:rotateX(-80deg) rotateY(20deg);transform:rotateX(-80deg) rotateY(20deg)}.preloader>div:nth-of-type(3){-webkit-transform:rotateX(-90deg) rotateY(90deg);transform:rotateX(-90deg) rotateY(90deg)}.preloader>div:nth-of-type(4){-webkit-transform:rotateX(70deg) rotateY(60deg);transform:rotateX(70deg) rotateY(60deg)}.preloader>div>div{width:200px;height:200px;position:relative;-webkit-transform-style:preserve-3d;transform-style:preserve-3d;-webkit-animation:trail_ 1s infinite ease-in-out;animation:trail_ 1s infinite ease-in-out}.preloader>div>div:after{position:absolute;top:-5px;box-shadow:0 0 12px #40c4ff;margin-left:-5px;width:8px;height:8px;background-color:#40c4ff;-webkit-animation:particle_ 1s infinite linear;animation:particle_ 1s infinite linear}.preloader>div:nth-of-type(2)>div,.preloader>div:nth-of-type(2)>div:after{-webkit-animation-delay:-.5s;animation-delay:-.5s}.preloader>div:nth-of-type(3)>div,.preloader>div:nth-of-type(3)>div:after{-webkit-animation-delay:-1s;animation-delay:-1s}.preloader>div:nth-of-type(4)>div,.preloader>div:nth-of-type(4)>div:after{-webkit-animation-delay:-1.5s;animation-delay:-1.5s}@-webkit-keyframes trail_{from{-webkit-transform:rotateZ(0)}to{-webkit-transform:rotateZ(360deg)}}@keyframes trail_{from{-webkit-transform:rotateZ(0);transform:rotateZ(0)}to{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}}@-webkit-keyframes particle_{from{-webkit-transform:rotateX(90deg) rotateY(0);transform:rotateX(90deg) rotateY(0)}to{-webkit-transform:rotateX(90deg) rotateY(-360deg);transform:rotateX(90deg) rotateY(-360deg)}}@keyframes particle_{from{-webkit-transform:rotateX(90deg) rotateY(0);transform:rotateX(90deg) rotateY(0)}to{-webkit-transform:rotateX(90deg) rotateY(-360deg);transform:rotateX(90deg) rotateY(-360deg)}}@keyframes nucleus_{0%,100%{box-shadow:0 0 0 transparent}50%{box-shadow:0 0 25px #40c4ff}}@-webkit-keyframes nucleus_{0%,100%{box-shadow:0 0 0 transparent}50%{box-shadow:0 0 25px #40c4ff}}@-webkit-keyframes fadeIn{from{background:#fff}to{background:rgba(255,255,255,.1)}}@keyframes fadeIn{from{background:#fff}to{background:rgba(255,255,255,.1)}}
 /*! Primitive
  * A front end Sass boilerplate
  *
@@ -247,17 +247,13 @@ pre {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled],
+
 html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0; }
 
 /* Reset
   =============== */
@@ -426,7 +422,8 @@ dd {
   padding: 0 1rem; }
 
 .container, .small-container, .medium-container {
-  max-width: 1200px;
+  max-width: 1400px;
+   display: table;
   padding: 0 1rem;
   margin-left: auto;
   margin-right: auto; }
@@ -477,6 +474,20 @@ dd {
     flex: 1 1 0;
     margin-bottom: 0; } }
 
+.half {
+	width: 70%; 
+	display: table-cell;
+	align:center;
+	padding: 50px;
+	
+}
+.manage {
+	width: 30%; 
+	display: table-cell;
+	align:center;
+	padding: 50px;
+	
+}
 /* Helpers
   =============== */
 .clearfix::before,

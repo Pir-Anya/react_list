@@ -19,15 +19,13 @@ class EditUser extends Component {
 
     }
 	
-	
+		
 	handleInputChange = event => {
 		const { name, value } = event.target
 		
 		this.setState({
 			[name] : value
-		});
-		
-		
+		});		
 	}
 	
 	
@@ -81,7 +79,7 @@ class EditUser extends Component {
 					value="Сохранить" 
 					 />	
 				<input 
-					type="button" 
+					type="button" onClick={this.props.setAdding}
 					value="Отмена" 
 					/>
 			</form>
