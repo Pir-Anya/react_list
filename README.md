@@ -5,6 +5,6 @@
 3. детализация записи
 
 <br>
-<img src="1.PNG" width="250px;">
+<img src="1.PNG" width="50%">
 <br>
-<img src="2.PNG" width="250px;">
+<img src="2.PNG" width="50%">
