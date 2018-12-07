@@ -26,7 +26,7 @@ class App extends Component {
       const { characters } = this.state;
       this.setState({
         characters: characters.filter((character, i) => { 
-            return i !== index;
+            return character.id !== index;
         })
       });
     }
@@ -64,6 +64,8 @@ class App extends Component {
 	
 	//добавление
 	handleSubmit = character => {
+		var lastId = this.state.characters[this.state.characters.length - 1].id; 
+		character.id = lastId+1;
 		this.setState({characters: [...this.state.characters, character]});
 	}
 	
